@@ -1,0 +1,78 @@
+html{
+    height:100%;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;  
+    background: var(--bgcolor);
+}
+
+button{
+    background: #001F3F;
+    color: white;
+    font-size: 20px;
+    height: 50px;
+    width: 200px;
+    padding: 10px;
+    border-radius: 50px;
+    border: none;
+    transition:  0.5s;
+}
+
+button:hover{
+    background: white;
+    color: var(--splashBg)
+}
+.container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    font-size: 50px;
+}
+
+img{
+    width: 300px;
+    background: none;
+}
+.mainContent{
+    padding-left: 50px;
+    padding-right: 50px;
+    background-image: url("img/home_background.jpg");
+    background-position: center;
+    background-size: cover;
+    align-items: left;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.footer{
+    background: black;
+    padding: 5px 0px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+    button{
+        width: 80%;
+        margin-bottom: 50px;
+    }
+    .mainContent{
+        align-items: center;
+    }
+    img{
+        width: 60%;
+    }
+}

@@ -1,0 +1,201 @@
+:root{
+    --bgcolor: white;
+    --fontcolor: white;
+    --splashBg:  #001F3F;
+    --formBg: rgba(245, 246, 250,1.0);
+    --cycle-color: #443737;
+}
+
+html{
+    height:100%;
+}
+  
+body{
+    font-family: 'Poppins', sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;  
+    background: var(--bgcolor);
+}
+
+#titleForLogin, #titleForsignup{
+    font-size: 70px;
+}
+
+.selectionLoginSignup{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    width: auto;
+    
+}
+
+.selectionbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    border: 5px solid#001F3F;
+    border-radius: 5px;
+}
+
+
+#switchtologin{
+    border: none;
+    padding: 0px 10px;
+    margin: -1px;
+    background: #001F3F;
+    color:white;
+}
+
+
+
+
+#switchtosignup{
+    border: none;
+    padding: 0px 10px;
+    margin: -1px;
+    background: white;
+    color: #001F3F;
+}
+
+
+button{
+    font-family: 'Poppins', sans-serif;
+    font-size: 70px;
+    background: none;
+    border: none;
+    color:#001F3F;
+    outline:0;
+}
+
+
+.container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradientBG 15s ease infinite;
+}
+
+
+.splash{
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--splashBg);
+    color: var(--fontcolor);
+    width: 50%;
+    transition:  5s;
+    animation: colorchange 30s infinite;
+    animation-direction: alternate;
+}
+
+.userForm{
+    display: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: var(--formBg);
+    width: 50%;
+}
+
+.footer{
+    background: black;
+    padding: 5px 0px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: px;
+    width: 100%;
+}
+.mainContent{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+input[type=email], input[type=password], input[type=text]{
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    padding: 10px 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    width: 300px;
+}
+
+input[type=submit]{
+    background: #001F3F;
+    color: white;
+    font-size: 16px;
+    width: 100px;
+    padding: 10px;
+    border-radius: 50px;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    transition:  0.5s;
+}
+
+input[type=submit]:hover{
+    background: white;
+    color: black;
+    box-shadow: 0px 0px 10px gray;
+    
+}
+
+select{
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    width: 300px;
+    border-radius: 5px;
+    padding: 10px 10px;
+}
+
+
+
+#loginForm{
+    display: block;
+    transition: 0.5s;
+}
+
+#signupForm{
+    transition: 0.5s;
+    display: none;
+}
+
+/*Mobile View Configs*/
+@media only screen and (max-width: 768px) {
+    :root{
+        --mainContentFD: column;
+    }
+    .splash, .userForm{
+        
+        
+        width: 100%;
+
+    }
+    .mainContent{
+        float: left;
+        flex-direction: column;
+    }
+}
+
+@keyframes colorchange
+{
+  0%   {background: red;}
+  25%  {background: #feca57;}
+  50%  {background: blue;}
+  75%  {background: green;}
+  100% {background: red;}
+}

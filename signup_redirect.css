@@ -1,0 +1,119 @@
+html{
+    height:100%;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;  
+    height: 100%;
+    background: rgba(245, 246, 250,1.0);
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradientBG 5s ease infinite;
+}
+
+button{
+    margin-top: 50px;
+    background: #001F3F;
+    color: white;
+    font-size: 20px;
+    height: 50px;
+    width: 200px;
+    padding: 10px;
+    border-radius: 50px;
+    border: none;
+    transition:  0.5s;
+}
+
+button:hover{
+    background: white;
+    color: black;
+}
+
+/*
+h1{
+    background: red;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-size: 150px;
+    padding-left: 50px;
+}
+
+h2{
+    background: blue;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-size: 50px;
+    padding-left: 50px;
+}
+*/
+
+.successMsg{
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    font-size: 40px;
+    color: white;
+    width: 100%;
+    align-items: left;
+}
+
+b{
+    display: flex;
+    width: 100%;
+    font-size: 110px;
+}
+
+.footer{
+    background: black;
+    padding: 5px 0px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: px;
+    width: 100%;
+}
+
+.mainContent{
+    padding-left: 50px;
+    padding-right: 50px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+@keyframes gradientBG {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+    button{
+        width: 80%;
+        margin-bottom: 50px;
+        justify-content: center;
+    }
+    .mainContent{
+        align-items: center;
+    }
+    .successMsg{
+        align-items: center;
+    }
+}

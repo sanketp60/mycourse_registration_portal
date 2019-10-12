@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="logo_white.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet"> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="login_signup.css">
+    <title>MyCourse - Login/Signup</title>
+</head>
+<body>
+    <div class="container">
+        <div class="mainContent">
+            <div class="splash">
+                <h1>
+                    Your knowledge,
+                    <br>
+                    our priority!
+                </h1>
+                <br>
+            </div>
+            <div class="userForm" align="center">
+                    <div class="selectionLoginSignup">
+                        <div class="selectionbox">
+                            <button type="button" id="switchtologin"><b>Log In</b></button>
+                            <button type="button" id="switchtosignup"><b>Sign Up</b></button>
+                        </div>
+                    </div>
+                <div id="loginForm">
+                    <form action="dashboard.php" method="POST">
+                        <br>
+                        <input type="email" name="EmailId" placeholder="Email ID" required>
+                        <br>
+                        <input type="password" name="userPass" placeholder="Password" required>
+                        <br>
+                        <input type="submit" id="submitLogin" name="submitIdPass" value="Log In">
+                    </form>
+                </div>
+                <div id="signupForm">
+                    <form action="signup_redirect.php" method="POST">
+                        <br>
+                        <input type="email" name="EmailId"  placeholder="Email ID" required>
+                        <br>
+                        <input type="password" name="userPass" id="userPassCss" placeholder="Password" required>
+                        <br>
+                        <input type="text" name="studentName"  placeholder="Name" required>
+                        <br>
+                        <input type="text" name="studentId"  placeholder="StudentID" required>
+                        <br>
+                            <h2> Current Year</h2>
+                                <select name="currentYear">
+                                    <option value="fe">First Year</option>
+                                    <option value="se">Second Year</option>
+                                    <option value="te">Third Year</option>
+                                    <option value="be">Fourth Year</option>
+                                </select>
+                            <h2>College</h2>
+                                <select name="college">
+                                    <option value="terna">Terna Engineering College</option>
+                                    <option value="bharti">Bharti Vidhyapeeth College</option>
+                                    <option value="sies">SIES GST College</option>
+                                    <option value="rait">Ramrao Adhik College</option>
+                                    <option value="acpatil">A.C.Patil College</option>
+                                </select>
+                        <br>
+                        <br>
+                        <input type="submit" id="submitSignup" name="submitIdPass" value="Sign Up">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore magni vitae nisi suscipit tenetur magnam.
+        </div>
+    </div>
+
+    <script>
+        
+    var loginvar = document.getElementById("loginForm");
+    var signupvar = document.getElementById("signupForm");
+    var signupbox = document.getElementById("switchtosignup");
+    var loginbox = document.getElementById("switchtologin");
+    switchtosignup = document.getElementById('switchtosignup');
+    switchtologin = document.getElementById('switchtologin');
+    
+    function showsignup () {
+        var button = this;
+        loginvar.style.display = "none";
+        signupvar.style.display = "block";
+        signupbox.style.background = "#001F3F";
+        signupbox.style.color = "white";
+        loginbox.style.background = "none";
+        loginbox.style.color = "#001F3F";
+
+    }
+    function showlogin () {
+        var button = this;
+        loginvar.style.display = "block";
+        signupvar.style.display = "none";
+        loginbox.style.background = "#001F3F";
+        loginbox.style.color = "white";
+        signupbox.style.background = "none";
+        signupbox.style.color = "#001F3F";
+    }
+    signupvar.style.transition = "0.5s";
+    loginvar.style.transition = "0.5s";
+    switchtosignup.onclick = showsignup;
+    switchtologin.onclick = showlogin;
+    </script>
+</body>
+</html>
